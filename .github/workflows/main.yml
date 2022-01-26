@@ -14,6 +14,7 @@ jobs:
         with:
           latexmk_use_lualatex: true
           # TODO ↓
+          glob_root_file: true
           root_file: "TuS/*.tex"
       - uses: actions/upload-artifact@v2
         with:
