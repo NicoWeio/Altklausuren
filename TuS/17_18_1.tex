@@ -79,15 +79,15 @@ bei dem vor der Wand $y=0$ ein Kastenpotential
 \]
 existiert (siehe Abbildung).
 
-\subsection(a)
+\subsection{a)}
 Berechnen Sie die kanonische Zustandssumme $Z_k$ und die freie Energie $F$ des Systems.
 
-\subsection(b)
+\subsection{b)}
 Bestimmen Sie die mittlere potentielle Energie $\a{\mathcal{H_\text{pot}}}$.
 \\
 Für welche Potentialstärke $V_0$ als Funktion von $L_y$ und $l$ ist die Aufenthaltswahrscheinlichkeit des Teilchens im Bereich $\mathcal{H}_\text{pot} = V_0$ (grauer Bereich)
 
-\subsection(c)
+\subsection{c)}
 Berechnen Sie die innere Energie $E$.
 Diskutieren Sie die beiden Fälle
 \begin{enumerate}
@@ -124,7 +124,7 @@ Verwenden Sie hierzu neben der Zustandsgleichung auch die Adiabatengleichung des
 Bei niedrigen Temperaturen können die Entropie $S$ und die isotherme Kompressibilität $\kappa_T$ eines schwach wechselwirkenden Bose-Gases beschrieben werden durch
 \begin{align}
     S(T,V) &= \frac{5}{2}aT^{3/2}V \;, \\
-    \kappa_T = \frac{1}{2c}V^2 \;.
+    \kappa_T &= \frac{1}{2c}V^2 \;.
 \end{align}
 Hierbei sind $a$ und $c$ Konstanten. Im Grenzfall niedriger Temperaturen und großer Volumen verschwinde der Druck $p$.
 
@@ -149,7 +149,7 @@ Ein quantenmechanisches System besitzt zwei Energieniveaus $\epsilon_1 = 0 < \ep
 Es gibt keine Übergangswahrscheinlichkeit zwischen den Niveaus und das System ist in Kontakt mit einem Wärmebad der Temperatur $T$.
 Der Hamilton-Operator $\hat H$ des System lautet also in Matrix-Darstellung:
 \[
-    \colvec{0\\0\\0\\\epsilon_2} \;.    
+    \colvec{0 & 0 \\ 0 & \epsilon_2} \;.    
 \]
 
 \subsection{a)}
@@ -165,6 +165,35 @@ Berechnen Sie die Entropie $S$ und die innere Energie $E$.
 \subsection{d)}
 Betrachten Sie $S$ und $E$ für die Grenzfälle $T \to 0$ und $T \to \infty$.
 Interpretieren Sie die Ergebnisse dieser Grenzfälle.
+
+
+\section{Aufgabe 6: Reales Gas}
+Die Zustandsgleichung eines realen gases wird um einen Punkt im $p,V$-Diagramm entwickelt.
+Es ergibt sich folgende näherungsweise Zustandsgleichung
+\[
+    p(t,v) = p_0 - Atv - Bv^3
+\]
+mit $v \equiv V - V_0$ und $t \equiv T - T_0$. $A$ und $B$ seien positive einheitenbehaftete Konstanten, welche die richtige Dimensionalität gewährleisten.
+
+\subsection{a)}
+Fertigen Sie je eine Skizze von $p(t,v)$ für $t<0$, $t=0$ und $t>0$ an.
+
+\subsection{b)}
+Für welche $t$ tritt thermodynamische Instabilität auf?
+Begründen Sie Ihre Antwort.
+
+
+Betrachten Sie im Folgenden nur den instabilen Fall und zeichnen Sie die berechneten Größen in Ihre Skizze ein.
+
+\subsection{c)}
+Wie lauten die Bestimmungsgleichungen für eine Maxwellkonstruktion um thermodynamische Stabilität zu erreichen?
+Welcher Druck $p_\text{pg}$ erfüllt die Bestimmungsgleichungen?
+
+\subsection{d)}
+Zwischen welchen Volumina $V_+$ und $v_-$ findet der Phasenübergang statt?
+
+\subsection{e)}
+Berechnen Sie die Grenzen der Bereiche, in denen metastabile Zustände auftreten können.
 
 
 \end{document}
