@@ -21,7 +21,7 @@ jobs:
           name: PDF
           path: ./main.pdf
       - name: Extract PDFs for bundling
-        run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' ./ gh-pages-bundle/
+        run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --exclude '*' ./ gh-pages-bundle/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
