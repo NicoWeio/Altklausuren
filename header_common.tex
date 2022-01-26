@@ -160,4 +160,15 @@
 \renewcommand{\@seccntformat}[1]{}
 \makeatother
 
+\NewCommandCopy{\oldDelta}{\Delta}
+\renewcommand{\Delta}{\mathrm{\oldDelta}}
+
+\newenvironment{aufgabe}[1]
+    {
+    \section{#1}
+    }
+    {
+    \clearpage
+    }
+
 % TODO: Nicht die neueste Version des Standard-header_common!
