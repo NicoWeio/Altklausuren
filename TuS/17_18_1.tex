@@ -1,0 +1,125 @@
+\input{header_common.tex}
+
+\subject{TuS}
+\title{Thermodynamik und Statistik}
+\date{
+    Wintersemester 2017/2018
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+% \tableofcontents
+\newpage
+
+
+\section{Aufgabe 1: Kurzfragen}
+\subsection{a)}
+Welche Aussagen machen der 2. und 3. Hauptsatz über die Entropie?
+
+Geben Sie eine Version des 2. Hauptsatzes an, die den Begriff Entropie nicht enthält.
+
+\subsection{b)}
+Ein mit einem idealen Gas gefüllter Ballon hat ein Volumen $V_\text{B}$ und der Luftdruck betrage $p_\text{L} = \SI{E5}{\newton\per\square\meter}$.
+Nun wird dieser Ballon 10 Meter tief in Wasser abgesent, das sich in vollständigem thermischen Gleichgewicht mit der Luft befindet. 
+Der Schweredruck des Wassers in Tiefe $h$ ist $p_\text{W} = \rho g h$ ($\rho_\text{Wasser} = \SI{E3}{\kilogram\per\cubic\meter}$ und rechnen Sie mit $g = \SI{10}{\meter\per\square\second}$).
+Wie groß ist das Volumen des Ballons in 10 Meter Tiefe?
+
+\subsection{c)}
+Wie lautet die Gibbssche Phasenregel (auftretende Größen definieren)?
+Wie viele Phasen können in einem zweikomponentigen System höchstens koexistieren?
+
+\subsection{d)}
+Wie lautet die Clausius-Clapeyron-Gleichung? 
+Wie sind die auftretenden Größen definiert?
+Was sagt die Clausius-Clapeyron-Gleichung über die Steigung der Schmelzlinie von Wasser im $p$-$T$-Diagramm aus?
+
+\subsection{e)}
+Wie groß ist im klassischen Hochtemperaturlimes die spezifische Wärme eines linearen 3-atomigen Moleküls der Form $A – A – A$?
+
+\subsection{f)}
+Zu einem Makrozustand gehören $M$ Mikrozustände.
+Wie groß ist die Entropie des Makrozustands?
+
+\subsection{g)}
+Ein einzelnes Teilchen befindet sich in einem Wärmebad mit Temperatur $T$ in einem äußeren Potential $V(\vec r)$. Wie groß ist die Wahrscheinlichkeit, dass Teilchen bei $\vec r$ zu finden (bis auf einen konstanten Normierungsfaktor)?
+
+\subsection{h)}
+Für das Photonengas gilt das Plancksche Strahlungsgesetz
+\[ 
+u(\omega) = \frac{\hbar\omega^3}{\pi^2c^3}\frac{1}{e^{\beta\hbar\omega} - 1} \;.
+\]
+Leiten Sie daraus die Gesamtenergie $E = E(T,V)$ her (bis auf einen konstanten nicht zu berechnenden Zahlfaktor in Form eines Integrals).
+Welche Temperaturabhängigkeit hat die spezifische Wärme?
+
+\subsection{i)}
+Was sind die natürlichen Variablen der Energie $E$ und der freien Energie $F$?
+Berechnen Sie die zur Energie 
+\[ 
+    E = p_0 V \exp\b{\frac{2S}{2\kB N}}    
+\]
+gehörige freie Energie in ihren natürlichen Variablen. 
+$p_0$ ist hierbei eine einheitenbehaftete Konstante.
+    
+    
+\subsection{j)}
+Wie verhält sich der Ordnungsparameter an einem diskontinuierlichen Phasenübergang? 
+Geben Sie ein Beispiel an.
+
+\subsection{k)}
+Wie lautet die kanonische Dichte $\rho = \rho(q_1, \ldots q_N, p_1, \ldots, p_N)$ eines klassischen $N$-Teilchensystems mit Hamiltonfunktion $H = H(q_1, \ldots q_N, p_1, \ldots, p_N)$ und wie berechnen sich die Zustandssumme und die Entropie eines Systems?
+
+\section{Aufgabe 2: Punktteilchen in Kasten}
+% TODO: Abbildung
+Gegeben sei ein Punktteilchen mit der Masse $m$ in einem zweidimensionalen Kasten $L_x \times L_y$, 
+bei dem vor der Wand $y=0$ ein Kastenpotential 
+\[
+\mathcal{H}_\text{pot}(y) = V_0\Theta(l-y)    
+\]
+existiert (siehe Abbildung).
+
+\subsection(a)
+Berechnen Sie die kanonische Zustandssumme $Z_k$ und die freie Energie $F$ des Systems.
+
+\subsection(b)
+Bestimmen Sie die mittlere potentielle Energie $\a{\mathcal{H_\text{pot}}}$.
+\\
+Für welche Potentialstärke $V_0$ als Funktion von $L_y$ und $l$ ist die Aufenthaltswahrscheinlichkeit des Teilchens im Bereich $\mathcal{H}_\text{pot} = V_0$ (grauer Bereich)
+
+\subsection(c)
+Berechnen Sie die innere Energie $E$.
+Diskutieren Sie die beiden Fälle
+\begin{enumerate}
+    \item $V_0 = 0$
+    \item $V_0 \to \infty$
+\end{enumerate}
+und erläutern Sie jeweils das Verhalten des Punktteilchens.
+
+
+\section{Aufgabe 3: Kreisprozess}
+Betrachten Sie einen aus den \textbf{drei} Teilprozessen
+\begin{itemize}
+    \item $1 \to 2$: adiabatische Expansion,
+    \item $2 \to 3$: isotherme Kompression,
+    \item $3 \to 1$: isonbare Erwärmung
+\end{itemize}
+bestehenden Kreisprozess, der als Arbeitssubstanz ein ideales Gas verwendet.
+
+\subsection{a)}
+Zeichnen Sie das zugehörige $p,V$- sowie das zugehörige $T,S$-Diagramm.
+Kennzeichnen Sie im $p,V$-Diagramm für alle Teilschritte, ob Wärme oder Arbeit zu- oder abgeführt wird.
+Ist die Gesamtarbeit $\symup\Delta$ positiv oder negativ?
+
+\subsection{b)}
+Berechnen Sie für jeden Teilschritt die Änderung der Wärme $\symup\Delta Q_{i \to j}$ und der Arbeit $\symup\Delta W_{i \to j}$ in Abhängigkeit der Volumina und Temperaturen sowie geeigneter thermodynamischer Koeffizienten.
+
+\subsection{c)}
+Drücken Sie das Verhältnis $p_2 / p_3$ als Funktion der Volumina $V_1$ und $V_2$ aus.
+Verwenden Sie hierzu neben der Zustandsgleichung auch die Adiabatengleichung des idealen Gases.
+
+\textit{Hinweis:} Sie müssen sich die Eigenschaften sämtlicher Teilprozesse zunutze machen.
+
+\section{Aufgabe 4: Bose-Gas mit schwacher Wechselwirkung}
+
+\end{document}

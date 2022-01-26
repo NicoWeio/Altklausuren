@@ -1,0 +1,21 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Generate PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: xu-cheng/latex-action@v2
+        with:
+          latexmk_use_lualatex: true
+          # TODO ↓
+          root_file: "TuS/*.tex"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: ./main.pdf
