@@ -22,6 +22,8 @@ jobs:
           path: ./main.pdf
       - name: Extract PDFs for bundling
         run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --exclude '*' ./ gh-pages-bundle/
+      - name: Generate index
+        run: sudo apt-get install tree && cd gh-pages-bundle && tree -H . > index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
