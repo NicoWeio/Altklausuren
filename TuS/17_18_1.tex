@@ -200,4 +200,40 @@
     Berechnen Sie die Grenzen der Bereiche, in denen metastabile Zustände auftreten können.
 \end{aufgabe}
 
+\begin{aufgabe}{Aufgabe 7: Abstraktes Fermigas}
+    Diese Aufgabe behandelt ein abstraktes, ideales Fermigas aus Spin-½-Teilchen mit der allgemeinen Dispersionsrelation
+    \[
+        \tilde\epsilon(\vec p) = \frac{1}{\alpha} |\vec p|^\gamma, \quad \gamma \geq 1 \;.
+    \]
+
+    $\alpha$ ist eine Konstante mit passender Einheit.
+    Betrachten Sie das Gas in drei Dimensionen bei der Temperatur $T=0$.
+
+    \subsection{a)}
+    Berechnen Sie die Fermienergie $\varepsilon_\text{F}$ und die Fermiwellenzahl $k_\text{F}$.
+    \textit{Kontrollergebnis:}
+    \[
+        \varepsilon_\text{F} = \frac{1}{\alpha}\b{3\pi^2\hbar^3\frac{N}{V}}^{\gamma/3}
+    \]
+
+    \subsection{b)}
+    Die Einteilchenzustandsdichte ist durch
+    \[
+        \rho(\varepsilon) = \frac{2}{V} \sum_{\vec p}{\delta(\varepsilon - \tilde\varepsilon(\vec p))}
+        = \frac{\alpha^{3/\gamma}}{\pi^2\hbar^3} \frac{\varepsilon^{(3-\gamma)/\gamma}}{\gamma}
+    \]
+    gegeben.
+    Bestimmen Sie hiermit die Grundzustandsenergie $E_0(N, V)$.
+    Wie lautet der Koeffizient $\eta$ in
+    \[
+        \frac{E_0}{N} = \eta\varepsilon_\text{F} \;\text{?}
+    \]
+
+    \subsection{c)}
+    Berechnen Sie den inneren Druck $P_0(N, V)$ des Fermi-Gases.
+    \textit{Tipp:} Sie dürfen das Kontrollergebnis \textbf{(2)} und Formel \textbf{(4)} verwenden.
+    % TOOD: Referenzen ergeben so noch keinen Sinn.
+
+\end{aufgabe}
+
 \end{document}
