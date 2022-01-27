@@ -10,18 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: xu-cheng/latex-action@v2
+      - name: Compile LaTex to PDFs
+        uses: xu-cheng/latex-action@v2
         with:
           latexmk_use_lualatex: true
           # TODO ↓
           glob_root_file: true
           root_file: "TuS/*.tex"
-      - uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: ./main.pdf
-      - name: Extract PDFs for bundling
-        run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --exclude '*' ./ gh-pages-bundle/
+      - name: Generate MD pages
+        run: |
+          sudo apt-get install pandoc 
+          find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
+      - name: Extract files for gh-pages
+        run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
       - name: Generate index
         run: sudo apt-get install tree && cd gh-pages-bundle && tree -H . > index.html
       - name: Deploy 🚀
