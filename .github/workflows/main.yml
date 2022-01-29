@@ -17,16 +17,21 @@ jobs:
           # TODO ↓
           glob_root_file: true
           root_file: "TuS/*.tex"
+      - name: Install APT dependencies
+        run: sudo apt-get install pandoc rename tree
       - name: Generate MD pages
-        run: |
-          sudo apt-get install pandoc
-          find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
+        run: find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
       - name: Extract files for gh-pages
-        run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
+        run: |
+          mkdir gh-pages-bundle
+          rsync -a --prune-empty-dirs --include '*/' --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
+          find gh-pages-bundle -name "*.tex.md" -exec rename -v 's/\.tex.md$/\.md/i' {} \;
       - name: Generate index
-        run: sudo apt-get install tree && cd gh-pages-bundle && tree -H . > index.html
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+        run: |
+          cd gh-pages-bundle
+          tree -H . > index.html
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
