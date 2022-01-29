@@ -34,9 +34,7 @@ jobs:
           rsync -a --prune-empty-dirs --include '*/' --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
           find gh-pages-bundle -name "*.tex.md" -exec rename -v 's/\.tex.md$/\.md/i' {} \;
       - name: Generate index
-        run: |
-          cd gh-pages-bundle
-          tree -H . > index.html
+        run: python3 build_index.py > gh-pages-bundle/index.md
       # - name: Setup tmate session
       #   uses: mxschmitt/action-tmate@v3
       - name: Deploy 🚀
