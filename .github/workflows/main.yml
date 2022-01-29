@@ -19,12 +19,14 @@ jobs:
           root_file: "TuS/*.tex"
       - name: Generate MD pages
         run: |
-          sudo apt-get install pandoc 
+          sudo apt-get install pandoc
           find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
       - name: Extract files for gh-pages
         run: mkdir gh-pages-bundle && rsync -a --prune-empty-dirs --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
       - name: Generate index
         run: sudo apt-get install tree && cd gh-pages-bundle && tree -H . > index.html
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
