@@ -27,7 +27,7 @@ jobs:
         env:
           PANDOC_VERSION: 2.17
       - name: Generate MD pages
-        run: find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
+        run: find */ -name '*.tex' -exec pandoc {} -o {}.md \;
       - name: Extract files for gh-pages
         run: |
           mkdir -p gh-pages-bundle
