@@ -23,7 +23,7 @@ jobs:
         run: find TuS -name '*.tex' -exec pandoc {} -o {}.md \;
       - name: Extract files for gh-pages
         run: |
-          mkdir gh-pages-bundle
+          mkdir -p gh-pages-bundle
           rsync -a --prune-empty-dirs --include '*/' --include '*.pdf' --include '*.md' --exclude '*' ./ gh-pages-bundle/
           find gh-pages-bundle -name "*.tex.md" -exec rename -v 's/\.tex.md$/\.md/i' {} \;
       - name: Generate index
