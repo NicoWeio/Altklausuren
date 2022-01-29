@@ -1,0 +1,194 @@
+\input{header_common.tex}
+
+\subject{TuS}
+\title{Thermodynamik und Statistik}
+\date{
+    Wintersemester 2007/2008
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+% \tableofcontents
+\newpage
+
+\begin{aufgabe}{Aufgabe 1: Kurzfragen}
+    \subsection{a)}
+    Was besagt das Wiederkehrtheorem?
+
+    Inwiefern scheint es der makrosopischen Erfahrung,
+    dass Systeme sich einem thermischen Gleichgewicht annähern,
+    zu widersprechen?
+
+    Wie löst sich der scheinbare Widerspruch auf?
+
+
+    \subsection{b)}
+    Inwieweit scheint die mikroskopische Reversibilität der Bewegungsgleichungen der makrosopischen Erfahrung,
+    dass Systeme sich einem thermischen Gleichgewicht annähern,
+    zu widersprechen?
+
+    Geben Sie zwei Überlegungen an,
+    wie sich dieser scheinbare Widerspruch auflöst.
+
+    \subsection{c)}
+    Worin besteht in der klassischen Statistik das Gibbs'sche Paradoxon?
+
+    Wie löst es sich in der Quantenmechanik auf?
+
+    \subsection{d)}
+    Was ist die Boltzmann-Entropie?
+
+    Was ist die Informationsentropie?
+
+    Wann werden die beiden Größen gleich?
+
+    \subsection{e)}
+    Erklären Sie die Begriffe extensive und intensive Zustandsgröße.
+    Was gilt für das Vorzeichen der zweiten Ableitungen thermodynamischer Potentiala nach extensiven oder nach intensiven Zustandsgrößen und mit welcher Begründung?
+
+    \subsection{f)}
+    Benennen Sie die drei Üblichen Gesamtheiten (Ensembles) und geben Sie jeweils die zugehörige thermodynamische Größe an,
+    die bei diesen Gesamtheiten minimal oder maximal wird.
+
+    Welche natürlichen Variablen haben diese Größen jeweils?
+\end{aufgabe}
+
+\begin{aufgabe}{Aufgabe 2: Auf noch einer anderen Welt}
+    Betrachten Sie in drei Dimensionen ein System von $N$ wechselwirkungsfreien, ununterscheidbaren Teilchen, deren Energie durch
+    \[
+        \epsilon(\vec r, \vec p) = \frac{\vec p^2}{2m} + V(z)
+    \]
+    gegeben ist.
+    Das Potential $V(z)$ sei
+    \[
+        V(z) = k\sqrt{z}
+    \]
+    für $0 \leq z \leq \infty$ und mit $k > 0$.
+
+    \subsection{a)}
+    Leiten Sie die Einteilchenzustandssumme $Z_1$ als Funktion der thermischen de-Broglie-Wellenlänge $\lambda_\beta$ her.
+    Wie lautet die Zustandssumme des gesamten Systems?
+
+    \subsection{b)}
+    Bestimmen Sie daraus die mittlere Gesamtenergie.
+
+    \subsection{c)}
+    Bestimmen Sie die Entropie $S$ und die freie Energie $F$.
+
+    \textit{Hinweis:} Zur Berechnung des Zustandssummenintegrals substituieren Sie $\beta k \sqrt{z} = u$.
+\end{aufgabe}
+
+\begin{aufgabe}{Aufgabe 3: Quantenmechanischer harmonischer Oszillator in 2D}
+    Der Hamilton-Operator eines harmonischen Oszillators in zwei Dimensionen sei in zweiter Quantisierung durch
+    \[
+        H = \hbar\omega_0 \sum_{i=0}^{2}{\b{b_i^\dagger b_i + \frac{1}{2}}}
+    \]
+    gegeben.
+
+    \subsection{a)}
+    Begründen Sie, dass zur Energie $E_m = (m+1)\hbar\omega_0$ der Entartungsgrad durch
+    \[
+        g(m) = m + 1
+    \]
+    gegeben ist.
+
+    \subsection{b)}
+    Berechnen Sie nun im Limes $\hbar\omega_0 \ll E$ die Zustandssumme
+    \[
+        Z = \int_0^\infty{D(E) \exp(-\beta E) \d E} \;.
+    \]
+    Dafür benötigen Sie die Zustandsdichte
+    \[
+        D(E := \sum_{m=0}^\infty{\delta\b{E - (m+1) \hbar\omega_0} g(m)} \;.
+    \]
+    Sie können $D(E)$ am einfachsten berechnen,
+    wenn Sie die Summe in ein Integral umschreiben,
+    wofür Sie $\hbar\omega_0 \ll E$ ausnutzen sollen.
+
+    \subsection{c)}
+    Berechnen Sie die Entropie $S$ f+ür $\hbar\omega_0 \ll k_B T$.
+\end{aufgabe}
+
+\begin{aufgabe}{Aufgabe 4: Informationsentropie}
+    Die allgemeine Rechnung für ein quantenmechanisches System kann leicht auf ein Zwei-Zustands-System mit Energien $\epsilon_1$ und $\epsilon_2$ spezialisiert werden,
+    bzw. auf ein $S = \frac{\hbar}{2}$-System.
+
+    \subsection{a)}
+    Bestimmen Sie – analog zur Vorlesung – die Wahrscheinlichkeiten $p_i$ so,
+    dass die Entropie unter den Nebenbedingungen
+    \begin{itemize}
+        \item $\displaystyle \sum_{i=1}^2{p_i} = 1$
+        \item und konstanter mittlerer Energie $\tilde\epsilon$
+    \end{itemize}
+    maximiert wird.
+    Was bedeutet die Maximierung der Entropie?
+
+    \subsection{b)}
+    Der Hamiltonoperator des Zweiniveausystems sei durch $\hat H = \mu B \hat S_z$ gegeben.
+    Dabei ist $\mu$ das magnetische Moment,
+    $B$ das Magnetfeld
+    und $S_z$ die $z$-Komponente des Spinoperators.
+    Identifizieren Sie die Energien $\epsilon_i$ und bestimmen Sie die freie Energie $F$.
+
+    \subsection{c)}
+    Geben Sie die Magnetisierung $M = \pdvfest{F}{B}{T}$ als Funktion von $\beta$, $\mu$ und $B$ an.
+
+    \subsection{d)}
+    Berechnen Sie die Suszeptibilität $\chi = \pdvfest{M}{B}{B=0}$.
+\end{aufgabe}
+
+\begin{aufgabe}{Aufgabe 5: Dichteoperatoren}
+    Für ein Drei-Zustandssystem mit Hamiltonoperator
+    \[
+        H = \colvec{-\epsilon & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & \epsilon}
+    \]
+    seien zur Zeit $t = 0$ die folgenden Dichteoperatoren gegeben:
+    \begin{align*}
+        p_\alpha &= \frac{1}{3}\colvec{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} &
+        p_\beta  &= \frac{1}{2}\colvec{1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 0} &
+        p_\gamma &= \frac{1}{3}\colvec{1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1} \;.
+    \end{align*}
+
+    \subsection{a)}
+    Geben Sie für jeden der drei Dichteoperatoren an,
+    ob er
+    i) \textit{rein}
+    und
+    ii) \textit{zeitlich konstant}
+    ist.
+    Begründen Sie Ihre Angaben.
+
+    \subsection{b)}
+    Berechnen Sie für alle drei Fälle $\a{H}$ und $\a{H^2}$ für $t=0$.
+
+    \subsection{c)}
+    Hängen die Erwartungswerte $\a{H}$ und $\a{H^2}$ im Allgemeinen von $t$ ab?
+    (Begründung!)
+\end{aufgabe}
+
+\begin{aufgabe}{Aufgabe 6: Thermodynamische Relationen}
+    Leiten Sie die folgenden thermodynamischen Relationen ab:
+    \subsection{a)}
+    \[
+        \pdvfest{S}{V}{T} = \pdvfest{p}{T}{V}
+    \]
+
+    \subsection{b)}
+    \[
+        \pdvfest{E}{T}{V} = T \pdvfest{S}{T}{V}
+    \]
+
+    \subsection{c)}
+    \[
+        \frac{\kappa_S}{\kappa_T} = \frac{C_V}{C_p}
+    \]
+
+    \subsection{d)}
+    \[
+        C_p - C_v = \frac{T V \alpha^2}{\kappa_T}
+    \]
+\end{aufgabe}
+
+\end{document}
