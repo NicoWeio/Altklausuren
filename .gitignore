@@ -1,5 +1,7 @@
 *.aux
 *.bcf
+*.cb
+*.cb2
 *.fdb_latexmk
 *.fls
 *.log
